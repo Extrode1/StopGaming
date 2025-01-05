@@ -3,4 +3,14 @@ body {
 }
 h1 {
     background-color: yellow;
+    font-family: calibri; 
+    font-size: 160%; 
+}
+p1 {
+    font-family: calibri; 
+    font-size: 100%; 
+}
+a {
+    font-family: calibri;   
+    font-size: 100%
 }
