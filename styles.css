@@ -37,3 +37,22 @@ a {
     font-family: calibri;   
     font-size: 100%
 }
+.button {
+    background-color: green; 
+    border: none;
+    color: white; 
+    font-size: 20px; 
+    cursor: pointer; 
+    display: inline-block; 
+    padding: 15px 32px; 
+    margin: 4px 2px;
+    border: 2px solid black; 
+    transition-duration: 0.4s; 
+
+}
+.button:hover {
+    background-color: lightgreen;
+    color: white; 
+
+}
+
