@@ -1,26 +1,27 @@
 body {
     margin: 20px; 
     background-image: url(grunge\ background.jpg); 
+    background-repeat: repeat-x; 
 }
 h1 {
     background-color: rgb(255, 195, 91);
     font-family: calibri; 
-    font-size: 190%; 
+    font-size: 250%; 
     text-align: center; 
     border-style: dashed; 
     color: rgb(0, 0, 0); 
 }
 .navbar ul{
-    list-style-type: none;
+    list-style-type:none;
     background-color: rgba(54, 252, 143, 0.678);
-    padding: 0px; 
+    padding: 2px; 
     margin: 0px; 
     overflow: hidden; 
 }
 .navbar a{
     color: rgb(0, 0, 0); 
-    text-decoration:none; 
-    padding: 15px; 
+    text-decoration:dashed; 
+    padding: 20px; 
     display: block; 
     text-align: center; 
 }
@@ -32,7 +33,7 @@ h1 {
 }
 p1 {
     font-family: calibri; 
-    font-size: 160%; 
+    font-size: 180%; 
     color: rgb(0, 0, 0); 
 }
 a {
@@ -43,7 +44,7 @@ a {
     background-color: green; 
     border: none;
     color: white; 
-    font-size: 25px; 
+    font-size: 30px; 
     cursor: pointer; 
     display: inline-block; 
     padding: 15px 32px; 
