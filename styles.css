@@ -7,7 +7,8 @@ h1 {
     font-family: calibri; 
     font-size: 250%; 
     text-align: center; 
-    border-style: dashed; 
+    border-style: solid;
+    border-radius: 5px; 
     color: rgb(0, 0, 0); 
 }
 .navbar ul{
@@ -49,7 +50,8 @@ a {
     padding: 15px 32px; 
     margin: 4px 2px;
     border: 2px solid black; 
-    transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    border-radius: 5px;  
 
 }
 .button:hover {
