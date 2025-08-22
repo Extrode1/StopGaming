@@ -3,7 +3,7 @@ var myQuestions = [
     {
         //question 1 (preoccupation)
         question: "Do you think about gaming when you are not playing (e.g. when you should be focusing on other things)? ", 
-        answer: {
+        answers: {
             a: 'Yes', 
             b: 'No', 
         }, 
@@ -12,7 +12,7 @@ var myQuestions = [
     {
         //question 2 (fraud)
         question: "Do you lie or try to hide how many hours you game from others? ",   
-        answer: {
+        answers: {
             a: 'Yes', 
             b: 'No', 
         }, 
@@ -21,7 +21,7 @@ var myQuestions = [
     {
         //question 3 (surrender from other activities)
         question: "Have you lost interest in hobbies that you previously had? ", 
-        answer: {
+        answers: {
             a: 'Yes', 
             b: 'No', 
         }, 
@@ -30,7 +30,7 @@ var myQuestions = [
     {
         //question 4 (continuation)
         question: "Do you continue to game despite knowing your life is getting worse as a result of it? ", 
-        amswer: {
+        amswers: {
             a: 'Yes', 
             b: 'No', 
         }, 
@@ -39,7 +39,7 @@ var myQuestions = [
     {
         //question 5 (withdrawal)
         question: "Have you experienced withdrawal symptoms when you tried to quit gaming? ", 
-        answer: {
+        answers: {
             a: 'Yes', 
             b: 'No', 
         }, 
@@ -48,7 +48,7 @@ var myQuestions = [
     {
         //question 6 (lose control)
         question: "Are you unable to moderate your gaming? ", 
-        answer: {
+        answers: {
             a: 'Yes', 
             b: 'No', 
         }, 
@@ -57,7 +57,7 @@ var myQuestions = [
     {
         //question 7 (escape)
         question: "Do you use gaming as an escape from reality? ", 
-        answer: {
+        answers: {
             a: 'Yes', 
             b: 'No', 
         }, 
@@ -66,7 +66,7 @@ var myQuestions = [
     {
         //question 8 (tolerance)
         question: "Do you need to play more video games to get the same level of enjoyment as you used to? ", 
-        answer: {
+        answers: {
             a: 'Yes', 
             b: 'No', 
         }, 
@@ -75,17 +75,17 @@ var myQuestions = [
     {
         //question 9 (negative consequences)
         question: "Have you had significant negative consequences as a result of excessive gaming (e.g. losing your job, relationships)? ", 
-        answer: {
+        answers: {
             a: 'Yes', 
             b: 'No', 
         }, 
         correctAnswer: 'a'
-    }, 
+    }
 ];
 //display quiz in container
-var quizContainer = document.getElementById('quiz'); 
-var resultsContainer = document.getElementById('results'); 
-var submitButton = document.getElementById('submit'); 
+var quizContainer = document.getElementById("quiz"); 
+var resultsContainer = document.getElementById("results"); 
+var submitButton = document.getElementById("submit"); 
 //generate quiz
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton); 
 
@@ -97,7 +97,7 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
         for (var i = 0; i < questions.length; i++){
         
             //reset answers to a blank array
-            answers = []
+            answers = []; 
             //iterate through all answers
             for (letter in questions[i].answers){
             
@@ -134,7 +134,7 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
                 userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked')||{}).value; 
             }
             //if answer is correct
-            if (userAnswer === questions[i].answer) {
+            if (userAnswer === questions[i].correctAnswer) {
                 numCorrect++; 
 
             }
@@ -153,7 +153,7 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
     showQuestions(questions, quizContainer, resultsContainer);  
 
     //show results when user submits results
-    submitButton.onClick = function () {
+    submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer); 
     }
 }
