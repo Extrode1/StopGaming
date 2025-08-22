@@ -7,7 +7,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
     {
         //question 2 (fraud)
@@ -16,7 +16,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
     {
         //question 3 (surrender from other activities)
@@ -25,7 +25,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
     {
         //question 4 (continuation)
@@ -34,7 +34,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
     {
         //question 5 (withdrawal)
@@ -43,7 +43,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
     {
         //question 6 (lose control)
@@ -52,7 +52,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
     {
         //question 7 (escape)
@@ -61,7 +61,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
     {
         //question 8 (tolerance)
@@ -70,7 +70,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
     {
         //question 9 (negative consequences)
@@ -79,7 +79,7 @@ var myQuestions = [
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'Yes'
+        correctAnswer: 'a'
     }, 
 ];
 //display quiz in container
