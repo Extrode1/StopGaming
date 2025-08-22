@@ -1,5 +1,5 @@
 //create variables
-var myQuestions = [ 
+const myQuestions = [ 
     {
         //question 1 (preoccupation)
         question: "Do you think about gaming when you are not playing (e.g. when you should be focusing on other things)? ", 
