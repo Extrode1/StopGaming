@@ -3,56 +3,83 @@ var myQuestions = [
     {
         //question 1 (preoccupation)
         question: "Do you think about gaming when you are not playing (e.g. when you should be focusing on other things)? ", 
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
     {
         //question 2 (fraud)
         question: "Do you lie or try to hide how many hours you game from others? ",   
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
     {
         //question 3 (surrender from other activities)
         question: "Have you lost interest in hobbies that you previously had? ", 
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
     {
         //question 4 (continuation)
         question: "Do you continue to game despite knowing your life is getting worse as a result of it? ", 
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
     {
         //question 5 (withdrawal)
         question: "Have you experienced withdrawal symptoms when you tried to quit gaming? ", 
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
     {
         //question 6 (lose control)
         question: "Are you unable to moderate your gaming? ", 
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
     {
         //question 7 (escape)
         question: "Do you use gaming as an escape from reality? ", 
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
     {
         //question 8 (tolerance)
         question: "Do you need to play more video games to get the same level of enjoyment as you used to? ", 
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
     {
         //question 9 (negative consequences)
         question: "Have you had significant negative consequences as a result of excessive gaming (e.g. losing your job, relationships)? ", 
-        options: ["Yes", "No"],
-        answer: "Yes"
+        options: {
+            a: 'Yes', 
+            b: 'No', 
+        }, 
+        answer: 'Yes'
     }, 
 
 
@@ -61,7 +88,33 @@ var myQuestions = [
 function generateQuiz (questions, quizContainer, resultsContainer, submitButton) {
     function showQuestions (questions, quizContainer) {
         //set up questions
+        var output = []; 
+        var answers; 
+        for (var i = 0; i < questions.length; i++)
+        {
+            //reset answers to a blank array
+            answers = []
+            //iterate through all answers
+            for (letter in questions[i].options)
+            {
+                //add html radio 
+                answers.push(
+                    '<label>' + '<input type = "radio" name="question' + i + '"value="' + letter + '">' 
+                    + letter + ': '
+                    + questions[i].options[letter]
+                    + '</label>' 
+                )
+            }
+            //add the question and answer to its output
+            output.push(
+                '<div class = "question">' + questions[i].question + '</div>'
+                + '<div class = "options">' + options.join('') + '</div>'
+            )
+        }
+        
     }
+    //combine output list into one html string and put it on the page
+    quizContainer.innerHTML = output.join(''); 
     function showResults (questions, quizContainer, resultsContainer) {
             //show the results
 
