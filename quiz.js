@@ -83,18 +83,18 @@ const myQuestions = [
     }
 ];
 //display quiz in container
-var quizContainer = document.getElementById("quiz"); 
-var resultsContainer = document.getElementById("results"); 
-var submitButton = document.getElementById("submit"); 
+const quizContainer = document.getElementById("quiz"); 
+const resultsContainer = document.getElementById("results"); 
+const submitButton = document.getElementById("submit"); 
 //generate quiz
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton); 
 
 function generateQuiz (questions, quizContainer, resultsContainer, submitButton) {
     function showQuestions (questions, quizContainer) {
         //set up questions
-        var output = []; 
-        var answers; 
-        for (var i = 0; i < questions.length; i++){
+        let output = []; 
+        let answers; 
+        for (let i = 0; i < questions.length; i++){
         
             //reset answers to a blank array
             answers = []; 
@@ -122,13 +122,13 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
 }
     function showResults (questions, quizContainer, resultsContainer) {
             //show the results
-            var answerContainers = quizContainer.querySelectorAll('.answers'); 
+            let answerContainers = quizContainer.querySelectorAll('.answers'); 
             //keep track of user's answers
-            var userAnswer = ''; 
-            var numCorrect = 0; 
+            let userAnswer = ''; 
+            let numCorrect = 0; 
         
             //iterate through each question
-            for (var i = 0; i < questions.length; i++){
+            for (let i = 0; i < questions.length; i++){
 
                 //find selected answer
                 userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked')||{}).value; 
