@@ -87,20 +87,24 @@ var myQuestions = [
 ];
 //display quiz in container
 var quizContainer = document.getElementById('quiz'); 
+var resultsContainer = document.getElementById('results'); 
+var submitButton = document.getElementById('submit'); 
+//generate quiz
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton); 
 function generateQuiz (questions, quizContainer, resultsContainer, submitButton) {
     function showQuestions (questions, quizContainer) {
         //set up questions
         var output = []; 
-        var answers; 
+        var options; 
         for (var i = 0; i < questions.length; i++)
         {
             //reset answers to a blank array
-            answers = []
+            options = []
             //iterate through all answers
             for (letter in questions[i].options)
             {
                 //add html radio 
-                answers.push(
+                options.push(
                     '<label>' + '<input type = "radio" name="question' + i + '"value="' + letter + '">' 
                     + letter + ': '
                     + questions[i].options[letter]
@@ -119,11 +123,34 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
     quizContainer.innerHTML = output.join(''); 
     function showResults (questions, quizContainer, resultsContainer) {
             //show the results
+            var answerContainers = quizContainer.querySelectorAll('.options'); 
+            //keep track of user's answers
+            var userAnswer = ''; 
+            var numCorrect = 0; 
+        
+            //iterate through each question
+            for (var i = 0; i < questions.length; i++){
 
+                //find selected answer
+                userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked')||{}).value; 
+            }
+            //if answer is correct
+            if (userAnswer === questions[i].answer) {
+                numCorrect++; 
+
+            }
+            
     }
-
+    if (numCorrect >= 5)
+    {
+        resultsContainer.innerHTML = 'You fulfilled ' + numCorrect + 'out of' + questions.length + '. This meets the criteria for video game addiction. '; 
+    } 
+    else
+    {
+        resultsContainer.innerHTML = 'You fulfilled' + numCorrect + 'out of' + questions.length + '. This does not meet the criteria for video game addiction. '; 
+    }
     //show questions
-    showQuestions(questions, quizContainer, resultsContainer); 
+    showQuestions(questions, quizContainer, resultsContainer);  
 
     //show results when user submits results
     submitButton.onClick = function () {
