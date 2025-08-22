@@ -84,7 +84,9 @@ var myQuestions = [
 
 
 
-]
+];
+//display quiz in container
+var quizContainer = document.getElementById('quiz'); 
 function generateQuiz (questions, quizContainer, resultsContainer, submitButton) {
     function showQuestions (questions, quizContainer) {
         //set up questions
