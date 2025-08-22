@@ -94,13 +94,13 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
         //set up questions
         var output = []; 
         var answers; 
-        for (var i = 0; i < questions.length; i++)
-        {
+        for (var i = 0; i < questions.length; i++){
+        
             //reset answers to a blank array
             answers = []
             //iterate through all answers
-            for (letter in questions[i].answers)
-            {
+            for (letter in questions[i].answers){
+            
                 //add html radio button
                 answers.push(
                     '<label>' + '<input type = "radio" name="question' + i + '"value="' + letter + '">' 
@@ -116,10 +116,10 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
             ); 
         }
         
-    }
+    
     //combine output list into one html string and put it on the page
     quizContainer.innerHTML = output.join(''); 
-} 
+}
     function showResults (questions, quizContainer, resultsContainer) {
             //show the results
             var answerContainers = quizContainer.querySelectorAll('.answers'); 
@@ -148,6 +148,7 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
     {
         resultsContainer.innerHTML = 'You fulfilled' + numCorrect + 'out of' + questions.length + '. This does not meet the criteria for video game addiction. '; 
     }
+
     //show questions
     showQuestions(questions, quizContainer, resultsContainer);  
 
@@ -155,5 +156,5 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
     submitButton.onClick = function () {
         showResults(questions, quizContainer, resultsContainer); 
     }
-
+}
 
