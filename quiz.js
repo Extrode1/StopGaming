@@ -3,83 +3,83 @@ const myQuestions = [
     {
         //question 1 (preoccupation)
         question: "Do you think about gaming when you are not playing (e.g. when you should be focusing on other things)? ", 
-        answers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }, 
     {
         //question 2 (fraud)
         question: "Do you lie or try to hide how many hours you game from others? ",   
-        answers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }, 
     {
         //question 3 (surrender from other activities)
         question: "Have you lost interest in hobbies that you previously had? ", 
-        answers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }, 
     {
         //question 4 (continuation)
         question: "Do you continue to game despite knowing your life is getting worse as a result of it? ", 
-        amswers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }, 
     {
         //question 5 (withdrawal)
         question: "Have you experienced withdrawal symptoms when you tried to quit gaming? ", 
-        answers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }, 
     {
         //question 6 (lose control)
         question: "Are you unable to moderate your gaming? ", 
-        answers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }, 
     {
         //question 7 (escape)
         question: "Do you use gaming as an escape from reality? ", 
-        answers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }, 
     {
         //question 8 (tolerance)
         question: "Do you need to play more video games to get the same level of enjoyment as you used to? ", 
-        answers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }, 
     {
         //question 9 (negative consequences)
         question: "Have you had significant negative consequences as a result of excessive gaming (e.g. losing your job, relationships)? ", 
-        answers: {
+        options: {
             a: 'Yes', 
             b: 'No', 
         }, 
-        correctAnswer: 'a'
+        answer: 'a'
     }
 ];
 //display quiz in container
@@ -92,7 +92,7 @@ let question = 0;
 let score = 0; 
 
 function showQuestion() {
-    const question = quizData[currentQuestion]; 
+    const question = myQuestions[currentQuestion]; 
     questionElement.innerText = question.question; 
 
     optionElement.innerHTML = ""; 
@@ -106,7 +106,7 @@ function showQuestion() {
 
 function selectAnswer(e) {
     const selectedButton = e.target; 
-    const answer = quizData[currentQuestion].answer; 
+    const answer = myQuestions[currentQuestion].answer; 
 
     if (selectedButton.innerText === answer) {
         score++; 
@@ -114,7 +114,7 @@ function selectAnswer(e) {
 
     currentQuestion++; 
 
-    if (currentQuestion < quizData.length) {
+    if (currentQuestion < myQuestions.length) {
         showQuestion(); 
     }
     else {
