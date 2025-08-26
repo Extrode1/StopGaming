@@ -83,78 +83,45 @@ const myQuestions = [
     }
 ];
 //display quiz in container
-const quizContainer = document.getElementById("quiz"); 
-const resultsContainer = document.getElementById("results"); 
+const quizContainer = document.getElementById("question"); 
+const resultsContainer = document.getElementById("options"); 
 const submitButton = document.getElementById("submit"); 
-//generate quiz
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton); 
 
-function generateQuiz (questions, quizContainer, resultsContainer, submitButton) {
-    function showQuestions (questions, quizContainer) {
-        //set up questions
-        let output = []; 
-        let answers; 
-        for (let i = 0; i < questions.length; i++){
-        
-            //reset answers to a blank array
-            answers = []; 
-            //iterate through all answers
-            for (letter in questions[i].answers){
-            
-                //add html radio button
-                answers.push(
-                    '<label>' + '<input type = "radio" name="question' + i + '"value="' + letter + '">' 
-                    + letter + ': '
-                    + questions[i].answers[letter]
-                    + '</label>' 
-                ); 
-            }
-            //add the question and answer to its output
-            output.push(
-                '<div class = "question">' + questions[i].question + '</div>'
-                + '<div class = "answers">' + answers.join('') + '</div>'
-            ); 
-        }
-        
-    
-    //combine output list into one html string and put it on the page
-    quizContainer.innerHTML = output.join(''); 
-}
-    function showResults (questions, quizContainer, resultsContainer) {
-            //show the results
-            let answerContainers = quizContainer.querySelectorAll('.answers'); 
-            //keep track of user's answers
-            let userAnswer = ''; 
-            let numCorrect = 0; 
-        
-            //iterate through each question
-            for (let i = 0; i < questions.length; i++){
+//set up score
+let question = 0; 
+let score = 0; 
 
-                //find selected answer
-                userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked')||{}).value; 
-            }
-            //if answer is correct
-            if (userAnswer === questions[i].correctAnswer) {
-                numCorrect++; 
+function showQuestion() {
+    const question = quizData[currentQuestion]; 
+    questionElement.innerText = question.question; 
 
-            }
-            
-    }
-    if (numCorrect >= 5)
-    {
-        resultsContainer.innerHTML = 'You fulfilled ' + numCorrect + 'out of' + questions.length + '. This meets the criteria for video game addiction. '; 
-    } 
-    else
-    {
-        resultsContainer.innerHTML = 'You fulfilled' + numCorrect + 'out of' + questions.length + '. This does not meet the criteria for video game addiction. '; 
+    optionElement.innerHTML = ""; 
+    question.options.forEach(option => {
+        const button = document.createElement("button"); 
+        button.innerText = option; 
+        optionsElement.appendChild(button); 
+        button.addEventListener("click", selectAnswer); 
+    }); 
+} 
+
+function selectAnswer(e) {
+    const selectedButton = e.target; 
+    const answer = quizData[currentQuestion].answer; 
+
+    if (selectedButton.innerText === answer) {
+        score++; 
     }
 
-    //show questions
-    showQuestions(questions, quizContainer, resultsContainer);  
+    currentQuestion++; 
 
-    //show results when user submits results
-    submitButton.onclick = function () {
-        showResults(questions, quizContainer, resultsContainer); 
+    if (currentQuestion < quizData.length) {
+        showQuestion(); 
+    }
+    else {
+        showResult(); 
     }
 }
+    function showResult () {
+        quiz.innerHTML = ' <h1> Quiz completed! </h1> <p> Your score: ${score}/${quiz.length} </p>'; 
+    }
 
