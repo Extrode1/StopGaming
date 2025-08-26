@@ -68,7 +68,7 @@ function showQuestion() {
     const question = myQuestions[currentQuestion]; 
     questionElement.innerText = question.question; 
 
-    optionElement.innerHTML = ""; 
+    optionsElement.innerHTML = ""; 
     question.options.forEach(option => {
         const button = document.createElement("button"); 
         button.innerText = option; 
