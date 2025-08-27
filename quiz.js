@@ -94,17 +94,17 @@ function selectAnswer(e) {
         showResult(); 
     }
 }
-    function showResult () {
-        if (score >= 5)
-            quiz.innerHTML = ` <h1> Quiz completed! </h1> 
-            <p> Your score: ${score}/${myQuestions.length} <br></br>
-            You are most likely addicted to gaming. 
-            `; 
-        else
+function showResult () {
+    if (score >= 5)
         quiz.innerHTML = ` <h1> Quiz completed! </h1> 
-            <p> Your score: ${score}/${myQuestions.length} <br></br>
-            You are most likely not addicted to gaming, but you still might have problematic gaming behaviours. 
-            `;  
+        <p> Your score: ${score}/${myQuestions.length} <br></br>
+        You are most likely addicted to gaming. 
+        `; 
+    else 
+    quiz.innerHTML = ` <h1> Quiz completed! </h1> 
+        <p> Your score: ${score}/${myQuestions.length} <br></br>
+        You are most likely not addicted to gaming, but you still might have problematic gaming behaviours. 
+        `;  
         
     }
 

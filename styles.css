@@ -25,6 +25,7 @@ h1 {
     padding: 20px; 
     display: block; 
     text-align: center; 
+
 }
 .navbar a:hover{
     background-color: rgb(243, 0, 0);
@@ -66,6 +67,10 @@ div {
 
 #question {
     font-size: 35px; 
+    font-style: bold; 
+    
 }
+
+
 
 
