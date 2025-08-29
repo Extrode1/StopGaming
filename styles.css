@@ -68,12 +68,21 @@ div {
 #question {
     font-size: 35px; 
     font-style: bold; 
+    margin-bottom: 20px; 
     
 }
 #options {
     display: grid; 
     gap: 10px; 
     grid-template-columns: repeat(2, 1fr);
+}
+#quiz {
+    max-width: 2000px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: lightblue; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rbga(198, 222, 60, 0.2); 
 }
 
 
