@@ -58,7 +58,6 @@ const myQuestions = [
 //display quiz in container
 const questionElement = document.getElementById("question"); 
 const optionsElement = document.getElementById("options"); 
-const submitButton = document.getElementById("submit"); 
 
 //set up score
 let currentQuestion = 0; 
