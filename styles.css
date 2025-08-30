@@ -31,7 +31,7 @@ h1 {
 
 }
 .navbar a:hover{
-    background-color: rgb(243, 0, 0);
+    background-color: rgb(253, 77, 77);
     border-radius: 20px; 
 }
 .navbar li{
