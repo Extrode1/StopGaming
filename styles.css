@@ -44,7 +44,7 @@ a {
     font-family: calibri;   
     font-size: 160%
 }
-.button {
+button {
     background-color: green; 
     border: none;
     color: white; 
@@ -58,10 +58,27 @@ a {
     border-radius: 5px;  
 
 }
-.button:hover {
+button:hover {
     background-color: lightgreen;
     color: white; 
 
+}
+.submit {
+    background-color: red; 
+    border: none;
+    color: white; 
+    font-size: 30px; 
+    cursor: pointer; 
+    display: inline-block; 
+    padding: 15px 32px; 
+    margin: 4px 2px;
+    border: 2px solid black; 
+    transition-duration: 0.4s;
+    border-radius: 5px;  
+}
+.submit:hover {
+    background-color: lightpink;
+    color: white; 
 }
 div {
     padding: 10px 75px 10px 75px; 
