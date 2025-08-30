@@ -102,6 +102,7 @@ div {
     background-color: lightblue; 
     border-radius: 5px; 
     box-shadow: 0 0 10px rbga(198, 222, 60, 0.2); 
+    font-size: 35px; 
 }
 
 

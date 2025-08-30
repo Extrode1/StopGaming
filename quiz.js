@@ -96,7 +96,7 @@ function selectAnswer(e) {
 }
 function showResult () {
     if (score >= 5)
-        quiz.innerHTML = ` <h1> Quiz completed! </h1> 
+        quiz.innerHTML = ` <h2> Quiz completed! </h2> 
         <p> Your score: ${score}/${myQuestions.length} <br></br>
         You are most likely addicted to gaming. 
         `; 
