@@ -83,7 +83,7 @@ button:hover {
     color: white; 
 }
 div {
-    padding: 10px 75px 10px 75px; 
+    padding: 10px 290px 10px 290px; 
 }
 
 #question {
@@ -94,7 +94,7 @@ div {
 }
 #options {
     display: grid; 
-    gap: 10px; 
+    gap: 20px; 
     grid-template-columns: repeat(2, 1fr);
 }
 #quiz {
@@ -102,7 +102,7 @@ div {
     margin: 0 auto; 
     padding: 20px; 
     background-color: lightblue; 
-    border-radius: 5px; 
+    border-radius: 20px; 
     box-shadow: 0 0 10px rbga(198, 222, 60, 0.2); 
     font-size: 35px; 
 }
