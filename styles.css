@@ -9,7 +9,7 @@ h1 {
     font-size: 250%; 
     text-align: center; 
     border-style: solid;
-    border-radius: 5px; 
+    border-radius: 20px; 
     color: rgb(0, 0, 0); 
 }
 .navbar ul{
@@ -57,7 +57,7 @@ button {
     margin: 4px 2px;
     border: 2px solid black; 
     transition-duration: 0.4s;
-    border-radius: 5px;  
+    border-radius: 20px;  
 
 }
 button:hover {
@@ -76,7 +76,7 @@ button:hover {
     margin: 4px 2px;
     border: 2px solid black; 
     transition-duration: 0.4s;
-    border-radius: 5px;  
+    border-radius: 20px;  
 }
 .submit:hover {
     background-color: lightpink;
