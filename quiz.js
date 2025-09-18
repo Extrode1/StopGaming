@@ -98,7 +98,7 @@ function selectAnswer(e) {
 //show final result depending on whether or not the person is addicted (need to meet at least 5 criteria to be classified as addiction)
 function showResult () {
     if (score >= 5)
-        quiz.innerHTML = ` <h2> Quiz completed! </h2> 
+        quiz.innerHTML = ` <h1> Quiz completed! </h1> 
         <p> Your score: ${score}/${myQuestions.length} <br></br>
         You are most likely addicted to gaming. 
         `; 
